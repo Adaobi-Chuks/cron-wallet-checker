@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "build/cron-job.js",
+            "use": "@vercel/node",
+            "config": { "includeFiles": ["build/**"] }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "build/cron-job.js"
+        },
+        {
+            "src": "/",
+            "dest": "build/cron-job.js"
+        },
+        {
+            "src": "/api/v1/(.*)",
+            "dest": "build/cron-job.js"
+        }
+    ]
+}
