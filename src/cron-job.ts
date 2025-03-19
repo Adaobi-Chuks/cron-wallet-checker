@@ -1,6 +1,7 @@
 import cron from "node-cron";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+process.env.TINY_SECP256K1_USE_WASM = '0';
 import * as multichainWallet from 'multichain-crypto-wallet';
 
 dotenv.config();

@@ -48,6 +48,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const node_cron_1 = __importDefault(require("node-cron"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
+process.env.TINY_SECP256K1_USE_WASM = '0';
 const multichainWallet = __importStar(require("multichain-crypto-wallet"));
 dotenv_1.default.config();
 const sendEmail = (subject, message) => __awaiter(void 0, void 0, void 0, function* () {
